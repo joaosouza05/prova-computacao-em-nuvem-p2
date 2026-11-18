@@ -1,0 +1,121 @@
+root@controlplane:~$ kubectl get services 
+
+NAME                 TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)   AGE
+
+comunicado-service   ClusterIP   10.99.219.107   <none>        80/TCP    4m42s
+
+kubernetes           ClusterIP   10.96.0.1       <none>        443/TCP   13d
+
+root@controlplane:~$ kubectl run teste --image=curlimages/curl:latest --rm -it --restart=Never -- curl http://comunicado-service
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>Welcome to nginx!</title>
+
+<style>
+
+html { color-scheme: light dark; }
+
+body { width: 35em; margin: 0 auto;
+
+font-family: Tahoma, Verdana, Arial, sans-serif; }
+
+</style>
+
+</head>
+
+<body>
+
+<h1>Welcome to nginx!</h1>
+
+<p>If you see this page, nginx is successfully installed and working.
+
+Further configuration is required for the web server, reverse proxy, 
+
+API gateway, load balancer, content cache, or other features.</p>
+
+<p>For online documentation and support please refer to
+
+<a href="https://nginx.org/">nginx.org</a>.<br/>
+
+To engage with the community please visit
+
+<a href="https://community.nginx.org/">community.nginx.org</a>.<br/>
+
+For enterprise grade support, professional services, additional 
+
+security features and capabilities please refer to
+
+<a href="https://f5.com/nginx">f5.com/nginx</a>.</p>
+
+<p><em>Thank you for using nginx.</em></p>
+
+</body>
+
+</html>
+
+All commands and output from this session will be recorded in container logs, including credentials and sensitive information passed through the command prompt.
+
+If you don't see a command prompt, try pressing enter.
+
+warning: couldn't attach to pod/teste, falling back to streaming logs: Internal error occurred: Internal error occurred: error attaching to container: container is in CONTAINER_EXITED state
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>Welcome to nginx!</title>
+
+<style>
+
+html { color-scheme: light dark; }
+
+body { width: 35em; margin: 0 auto;
+
+font-family: Tahoma, Verdana, Arial, sans-serif; }
+
+</style>
+
+</head>
+
+<body>
+
+<h1>Welcome to nginx!</h1>
+
+<p>If you see this page, nginx is successfully installed and working.
+
+Further configuration is required for the web server, reverse proxy, 
+
+
+API gateway, load balancer, content cache, or other features.</p>
+
+
+<p>For online documentation and support please refer to
+
+<a href="https://nginx.org/">nginx.org</a>.<br/>
+
+To engage with the community please visit
+
+<a href="https://community.nginx.org/">community.nginx.org</a>.<br/>
+
+For enterprise grade support, professional services, additional 
+
+security features and capabilities please refer to
+
+<a href="https://f5.com/nginx">f5.com/nginx</a>.</p>
+
+
+<p><em>Thank you for using nginx.</em></p>
+</body>
+
+</html>
+
+pod "teste" deleted from default namespace
+
+root@controlplane:~$ 
