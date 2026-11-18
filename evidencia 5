@@ -1,0 +1,13 @@
+root@controlplane:~$ kubectl delete pod minha-aplicacao-58d4f88b97-2mtjb
+
+pod "minha-aplicacao-58d4f88b97-2mtjb" deleted from default namespace
+
+root@controlplane:~$ kubectl get pods
+
+NAME                               READY   STATUS    RESTARTS   AGE
+
+minha-aplicacao-58d4f88b97-bgfxm   1/1     Running   0          7m35s
+
+minha-aplicacao-58d4f88b97-l4lb5   1/1     Running   0          16s
+
+minha-aplicacao-58d4f88b97-wr2g5   1/1     Running   0          2m22s
