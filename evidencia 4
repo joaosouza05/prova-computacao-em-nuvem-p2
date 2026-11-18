@@ -1,0 +1,9 @@
+root@controlplane:~$ kubectl get pods
+
+NAME                               READY   STATUS    RESTARTS   AGE
+
+minha-aplicacao-58d4f88b97-2mtjb   1/1     Running   0          23s
+
+minha-aplicacao-58d4f88b97-bgfxm   1/1     Running   0          5m36s
+
+minha-aplicacao-58d4f88b97-wr2g5   1/1     Running   0          23s
