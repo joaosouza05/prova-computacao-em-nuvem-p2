@@ -1,0 +1,15 @@
+root@controlplane:~$ kubectl create deployment minha-aplicacao --image=nginx
+
+deployment.apps/minha-aplicacao created
+
+root@controlplane:~$ kubectl get deployments
+
+NAME              READY   UP-TO-DATE   AVAILABLE   AGE
+
+minha-aplicacao   1/1     1            1           13s
+
+root@controlplane:~$ kubectl get pods
+
+NAME                               READY   STATUS    RESTARTS   AGE
+
+minha-aplicacao-58d4f88b97-bgfxm   1/1     Running   0          29s
